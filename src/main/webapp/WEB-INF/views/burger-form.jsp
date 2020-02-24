@@ -52,16 +52,16 @@
 		<fieldSet>
 			<legend><h4>Step 4- ADD YOUR CHEESE</h4></legend>
 			<p>.60 cents each</p>
-			<label><input type="radio" name="cheese" value="Sharp Cheddar 0.60"/> Sharp Cheddar </label>
-			<label><input type="radio" name="cheese" value="Yellow American 0.60"/> Yellow American </label>
-			<label><input type="radio" name="cheese" value="Spicy Jalapeno Jack 0.60"/> Spicy Jalapeno Jack </label>
-			<label><input type="radio" name="cheese" value="Crumbled Blue Cheese 0.60"/> Crumbled Blue Cheese </label>
-			<label><input type="radio" name="cheese" value="Nacho Cheese 0.60"/> Nacho Cheese </label>
-			<label><input type="radio" name="cheese" value="Shredded Cheese 0.60"/> Shredded Cheese </label>
-			<label><input type="radio" name="cheese" value="Parmesan 0.60"/> Parmesan </label>
-			<label><input type="radio" name="cheese" value="Smoked Gouda 0.60"/> Smoked Gouda </label>
-			<label><input type="radio" name="cheese" value="Feta 0.60"/> Feta </label>
-			<label><input type="radio" name="cheese" value="Swiss 0.60"/> Swiss </label>
+			<label><input type="checkbox" name="cheese" value="Sharp Cheddar 0.60"/> Sharp Cheddar </label>
+			<label><input type="checkbox" name="cheese" value="Yellow American 0.60"/> Yellow American </label>
+			<label><input type="checkbox" name="cheese" value="Spicy Jalapeno Jack 0.60"/> Spicy Jalapeno Jack </label>
+			<label><input type="checkbox" name="cheese" value="Crumbled Blue Cheese 0.60"/> Crumbled Blue Cheese </label>
+			<label><input type="checkbox" name="cheese" value="Nacho Cheese 0.60"/> Nacho Cheese </label>
+			<label><input type="checkbox" name="cheese" value="Shredded Cheese 0.60"/> Shredded Cheese </label>
+			<label><input type="checkbox" name="cheese" value="Parmesan 0.60"/> Parmesan </label>
+			<label><input type="checkbox" name="cheese" value="Smoked Gouda 0.60"/> Smoked Gouda </label>
+			<label><input type="checkbox" name="cheese" value="Feta 0.60"/> Feta </label>
+			<label><input type="checkbox" name="cheese" value="Swiss 0.60"/> Swiss </label>
 		</fieldSet>
 		
 		<fieldSet>
@@ -89,32 +89,31 @@
 		
 		<p><h4>PREMIUM TOPPINGS</h4></p>
 			<p>
-				<label><input type="radio" name="premium" value="BBQ Pulled Pork 1.25"/> BBQ Pulled Pork 1.25</label>
-				<label><input type="radio" name="premium" value="Caramelized Onions 0.75"/> Caramelized Onions .75</label>
-				<label><input type="radio" name="premium" value="Sauteed Mushrooms 0.75"/> Sauteed Mushrooms .75</label>
-				<label><input type="radio" name="premium" value="Crispy Onion Straws 0.75"/> Crispy Onion Straws 7.5</label>
-				<label><input type="radio" name="premium" value="Detroit Chili Sauce 0.50"/> Detroit Chili Sauce .50</label>
-				<label><input type="radio" name="premium" value="Portabella Slices 1.50"/> Portabella Slices 1.50</label>
+				<label><input type="checkbox" name="premium" value="BBQ Pulled Pork 1.25"/> BBQ Pulled Pork 1.25</label>
+				<label><input type="checkbox" name="premium" value="Caramelized Onions 0.75"/> Caramelized Onions .75</label>
+				<label><input type="checkbox" name="premium" value="Sauteed Mushrooms 0.75"/> Sauteed Mushrooms .75</label>
+				<label><input type="checkbox" name="premium" value="Crispy Onion Straws 0.75"/> Crispy Onion Straws .75</label>
+				<label><input type="checkbox" name="premium" value="Detroit Chili Sauce 0.50"/> Detroit Chili Sauce .50</label>
+				<label><input type="checkbox" name="premium" value="Portabella Slices 1.50"/> Portabella Slices 1.50</label>
 			</p>
 			<p>
-				<label><input type="radio" name="premium" value="Mac & Cheese Bites 1.25"/> Mac & Cheese Bites 1.25</label>
-				<label><input type="radio" name="premium" value="Egg, Sunny Side Up 0.75"/> Egg, Sunny Side Up .75</label>
-				<label><input type="radio" name="premium" value="Egg, Over Hard 0.75"/> Egg, Over Hard .75</label>
-				<label><input type="radio" name="premium" value="Guacamole 0.60"/> Guacamole .60</label>
-				<label><input type="radio" name="premium" value="Bacon Hickory Smoked 0.99"/> Bacon Hickory Smoked .99</label>
-				<label><input type="radio" name="premium" value="French Fries 0.50"/> French Fries .50</label>
+				<label><input type="checkbox" name="premium" value="Mac & Cheese Bites 1.25"/> Mac & Cheese Bites 1.25</label>
+				<label><input type="checkbox" name="premium" value="Egg Sunny Side Up 0.75"/> Egg, Sunny Side Up .75</label>
+				<label><input type="checkbox" name="premium" value="Egg Over Hard 0.75"/> Egg, Over Hard .75</label>
+				<label><input type="checkbox" name="premium" value="Guacamole 0.60"/> Guacamole .60</label>
+				<label><input type="checkbox" name="premium" value="Bacon Hickory Smoked 0.99"/> Bacon Hickory Smoked .99</label>
+				<label><input type="checkbox" name="premium" value="French Fries 0.50"/> French Fries .50</label>
 			</p>
 		</fieldSet>
 		 
 		<fieldSet>
 			<legend><h4>Step 6- CHOOSE YOUR SPREADS</h4></legend>
-			<p>1 FREE - Each Additional .25</p>
-			<label><input type="radio" name="spreads" value="Red Pepper Mayo 0.25"/> Red Pepper Mayo</label>
-			<label><input type="radio" name="spreads" value="Garlic Mayo 0.25"/> Garlic Mayo</label>
-			<label><input type="radio" name="spreads" value="Mayo 0.25"/> Mayo</label>
-			<label><input type="radio" name="spreads" value="1000 Island 0.25"/> 1000 Island</label>
-			<label><input type="radio" name="spreads" value="Honey Mustard 0.25"/> Honey Mustard</label>
-			<label><input type="radio" name="spreads" value="Salsa 0.25"/> Salsa</label>
+			<label><input type="checkbox" name="spreads" value="Red Pepper Mayo 0.25"/> Red Pepper Mayo .25</label>
+			<label><input type="checkbox" name="spreads" value="Garlic Mayo 0.25"/> Garlic Mayo .25</label>
+			<label><input type="checkbox" name="spreads" value="Mayo 0.25"/> Mayo .25</label>
+			<label><input type="checkbox" name="spreads" value="1000 Island 0.25"/> 1000 Island .25</label>
+			<label><input type="checkbox" name="spreads" value="Honey Mustard 0.25"/> Honey Mustard .25</label>
+			<label><input type="checkbox" name="spreads" value="Salsa 0.25"/> Salsa .25</label>
 		</fieldSet>
 		
 		<fieldSet>
@@ -130,7 +129,7 @@
 			<p>Name: <input type="text" name="name" pattern="[Aa-Zz]+" required minlength="4" maxlength="10"/></p>
 			<p>Date of order: <input type="date" name="order-date"/></p> 
 			<p>Address: <input type="text" name="address"  required minlength="10" maxlength="50"/></p>
-			<p>Phone number: <input type="number" name="phone"  required minlength="10" maxlength="10"/></p>
+			<p>Phone number: <input type="text" name="phone"  required minlength="10" maxlength="10"/></p>
 			
 		</fieldSet>
 		<p>

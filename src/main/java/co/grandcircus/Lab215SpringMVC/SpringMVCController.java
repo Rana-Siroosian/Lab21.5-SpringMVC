@@ -19,7 +19,7 @@ public class SpringMVCController {
 		ModelAndView mav = new ModelAndView("index");
 		return mav;
 	}
-	
+	 
 	@RequestMapping("/mileage-form")
 	public ModelAndView showMileageForm() {
 		ModelAndView mv = new ModelAndView("/mileage-form");
@@ -34,9 +34,9 @@ public class SpringMVCController {
 	@RequestMapping("/add-result")
 	public ModelAndView showAddResult(
 			@RequestParam("mpg") int mpg,
-			@RequestParam("gallons") int gallons,
+			@RequestParam("gallons") double gallons,
 			@RequestParam("distance") Double distance){
-		int result = mpg * gallons;
+		double result = mpg * gallons;
 		boolean color=true;
 		double result1 = distance - result;
 		String msg="";
@@ -174,20 +174,21 @@ public class SpringMVCController {
 			@RequestParam("name") String name,
 			@RequestParam("order-date") @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate date,
 			@RequestParam("address") String address,
-			@RequestParam("phone") int phone
+			@RequestParam("phone") String phone
 			) {
 		String s1 = (burger.substring(burger.length()-5));
-		String s2 = (cheese.substring(cheese.length()-5));
+//		String s2 = (cheese.substring(cheese.length()-5));
 //		String s3 = (toppings.substring(toppings.length()-5));
-		String s4 = (premium.substring(premium.length()-5));
-		String s5 = (spreads.substring(spreads.length()-5));
+//		String s4 = (premium.substring(premium.length()-5));
+//		String s5 = (spreads.substring(spreads.length()-5));
 		String s6 = (side.substring(side.length()-5));
+		
+		
 		String[] s=  {toppings};
 		System.out.println((Arrays.toString(s)));
 		
 		int count =0;
 		for (String ss: s) {
-			ss=ss.trim();
 			for(int i =0; i<ss.length();i++) {
 			if(ss.charAt(i)==',') {
 				count+=1;
@@ -200,13 +201,58 @@ public class SpringMVCController {
 			rest = count - 4;
 			rest = rest * 0.25;
 		}
+		
+		int ch =0;
+		String [] che = {cheese};
+		for (String chees : che) {
+			for (int i = 0; i<chees.length();i++) {
+				if(chees.charAt(i)==',') {
+					ch += 1;
+				}
+			}
+		}
+		double ch1 = (ch+1) * 0.60;
+		System.out.println("ch " +ch1);
+		int sp = 0;
+		String [] spre = {spreads};
+		for (String spread:spre) {
+			for (int i =0 ; i<spread.length();i++) {
+				if(spread.charAt(i)==',') {
+					sp+=1;
+				}
+			}
+		}
+		double sp1 = (sp+1) * 0.25;
+		String[] p = {premium};
+		System.out.println(Arrays.toString(p));
+		double pre =0;
+		int index=0;
+		String x="";
+		for (String pp : p) {
+			System.out.println("length"+pp.length());
+			for(int i=0 ; i<pp.length();i++) {
+				if(pp.charAt(i)==',') {
+					index = i;
+					System.out.println(index);
+					x = (pp.substring(i-5,i));
+					System.out.println("x"+x);
+					pre = pre + Double.parseDouble(x);
+					System.out.println("pre"+pre);
+				}
+				 
+				
+			}
+			pre = pre + Double.parseDouble((pp.substring(pp.length()-5)));
+			System.out.println("final pre " +pre);
+		}
+		
 		double p1 = Double.parseDouble(s1);
-		double p2 = Double.parseDouble(s2);
+//		double p2 = Double.parseDouble(s2);
 //		double p3 = Double.parseDouble(s3);
-		double p4 = Double.parseDouble(s4);
-		double p5 = Double.parseDouble(s5);
+//		double p4 = Double.parseDouble(s4);
+//		double p5 = Double.parseDouble(s5);
 		double p6 = Double.parseDouble(s6);
-		double burgerPrice = p1 + p2 + rest + p4 + p5 + p6;
+		double burgerPrice = p1 + ch1 + rest + pre + sp1 + p6;
 		ModelAndView mv = new ModelAndView ("/burger-result");
 		mv.addObject("burger", burger);
 		mv.addObject("temp",temp);
